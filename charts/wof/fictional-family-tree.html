@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title id="TITLE">Loading...</title>
+        <link rel="stylesheet" href="navbar.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+            body {
+                font-family: 'Inter', Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+
+            .navbar {
+                background-color: #000000;
+                overflow: hidden;
+                padding: 10px;
+            }
+
+            .navbar a {
+                color: #ffffff;
+                text-decoration: none;
+                padding: 10px;
+            }
+
+            .main {
+                padding: 20px;
+                width: 100%;
+                background-color: #f1f1f1;
+            }
+
+            .footer {
+                background-color: #000000;
+                color: #ffffff;
+                text-align: center;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="navbar" class="navbar">
+            <!-- DYNAMIC CONTENT: DO NOT EDIT -->
+        </div>
+        <div class="main">
+            <iframe src="https://mermaid.live/embed?theme=default&look=classic&mode=light#pako:eNqNk19r2zAUxb-KUF9VCGSs1IWBmsQJxg5mKknZvIcbW45FFCnINm1W-t13nX-2BoP5xRz9dK6uz5U_aG4LSQNaavuWV-AaEn_PTGYIPmHyM6OhVqYhiQQtXUZ_ncnkGcnEHesGNHnW8Fue0BnGLwhjBQbIS6XqRsubLxKIIiikISKHvt4swvXZfiMdiSDf1db0iJ-Q0kdjCNfQOPV-g-uu3lppbJ4IZXINqi_KQ4TcbKUm-BHbqrkR0REhHRwqhV2GyvUt8q4k32-craVf88zTjqfQVKUyBfYrcqdlX3raZTYF55QhCb7s2w0tOufCGnkkos13g1hEZxKVPFTSFSSxpikcbC8hXBLvtky0bTvemgZUH9EyRrY8VkBiaJ0azGk1R7LCGc31oBHe7ccoN1BjmkaSGNN9A70bOKPXblLKvJNrXzcUp6f54jhSq4eDDxNyf_8N5-_JSHhyFvmSe3Ltb-ahJ4Uvueiv3GkhFZ6cJp5c-FQkt2yfvVYucpJ4chl7cjX3JPdp9OrJOL0ehbeprqeyJAdwEv-rEu9ucFd8gXL8wHAadieDu_F4zHKrrQvuRqPR01_OvFK6uBofJZT_a9w6MMXQLb-WD8Xjv90DP0bO8GPOXQ8LY5osEmwWsRlna8F4yETIuGCThC1jtpozHrPolcXpuXHPmwo2TdhCMJEMunuijG6dKmjQuFYyupduD52kHxltKrnHOxdktJAltBr_PJZRbe3utHiqq_KMfmKRA5gf1u6vdZxttxUNStA1qvZQQCOnCvDgy5bPP8cYf78" width="100%" height="480" style="border:0" loading="lazy" title="Mermaid diagram" sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+            <b><i>This is a third-party software. I am not responsible for anything on the third party website.</i></b>
+        </div>
+        <div class="footer">
+            <a>Developed by Developer-Azure (@Azure Azure).</a>
+            <a href="https://opensource.org/licenses/MIT">MIT License</a>
+        </div>
+    </body>
+    <script>
+        const TITLE = document.getElementById("TITLE");
+        const NAVBAR = document.getElementById("navbar");
+
+        TITLE.innerText = "Family Graph 1 - Developer-Azure | Nothing is Impossible.";
+
+        fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                NAVBAR.innerHTML = data;
+            })
+            .catch(error => {
+                console.error("Error loading navbar:", error);
+                NAVBAR.innerHTML = "<a>There was a problem while loading this page. Report this to the developers.</a>";
+            });
+    </script>
+</html>
