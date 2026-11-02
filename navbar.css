@@ -1,3 +1,8 @@
+:root {
+    --gradient-left: #7DF9FF;
+    --gradient-right: #2A52BE;
+}
+
 #navbar-element {
     background: black;
     color: white;
@@ -35,6 +40,10 @@
 }
 
 #navbar-element .logo-text {
+    background: linear-gradient(to right, var(--gradient-left), var(--gradient-right));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     display: flex;
     align-items: center;
     gap: 10px;
