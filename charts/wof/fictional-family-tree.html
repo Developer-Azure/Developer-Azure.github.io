@@ -58,7 +58,7 @@
 
         TITLE.innerText = "Family Graph 1 - Developer-Azure | Nothing is Impossible.";
 
-        fetch("navbar.html")
+        fetch("/navbar.html")
             .then(response => response.text())
             .then(data => {
                 NAVBAR.innerHTML = data;
