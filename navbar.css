@@ -1,6 +1,6 @@
 :root {
     --gradient-left: #7DF9FF;
-    --gradient-right: #2A52BE;
+    --gradient-right: #008FC7;
 }
 
 #navbar-element {
@@ -53,6 +53,10 @@
         var(--gradient-left),
         var(--gradient-right)
     );
+
+    
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 
     -webkit-background-clip: text;
     background-clip: text;
