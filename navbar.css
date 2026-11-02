@@ -39,14 +39,28 @@
     object-fit: fill;
 }
 
+
 #navbar-element .logo-text {
-    background: linear-gradient(to right, var(--gradient-left), var(--gradient-right));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 10px;
+}
+
+#navbar-element .logo-text a {
+    background: linear-gradient(
+        to right,
+        var(--gradient-left),
+        var(--gradient-right)
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+    text-decoration: none;
 }
 
 #navbar-element .navigation-container a {
