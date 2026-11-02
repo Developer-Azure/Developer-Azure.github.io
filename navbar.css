@@ -34,6 +34,12 @@
     object-fit: fill;
 }
 
+#navbar-element .logo-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 #navbar-element .logo-text a,
 #navbar-element .navigation-container a {
     color: white;
@@ -41,10 +47,12 @@
 
 #navbar-element .logo-divider {
     width: 2px;
-    height: 40px;
-    margin: 0 5px;
-    border: 1px solid lightgray;
-    color: lightgray;
+    min-width: 2px;
+    height: 32px;
+    background: lightgray;
+    border: none;
+    display: block;
+    flex-shrink: 0;
 }
 
 #navbar-element .navigation-container a {
