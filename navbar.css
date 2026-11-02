@@ -47,10 +47,6 @@
     color: lightgray;
 }
 
-#navbar-element .navigation-container {
-    border: 1px solid blue;
-}
-
 #navbar-element .navigation-container a {
     padding: 10px;
     text-decoration: none;
