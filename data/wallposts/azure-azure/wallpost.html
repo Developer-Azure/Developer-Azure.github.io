@@ -1,1 +1,250 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+    :root {
+        font-family: 'Inter', sans-serif;
+        --azure-primary-color: #ff0000;
+        --azure-secondary-color: #FFFF00;
+        --azure-text-color: #000000;
+        --azure-secondary-text-color: #909090;
+        --azure-background: url("media/background.jpg");
+        --azure-background-size: cover;
+        --azure-section-background: #99755c;
+        --azure-section-background-alpha: 50%;
 
+        --azure-section-background-blur: 4px;
+    }
+
+    .background {
+        position: relative;
+        isolation: isolate;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--azure-background);
+        background-position: center;
+        background-size: var(--azure-background-size);
+        background-repeat: no-repeat;
+        color: var(--azure-text-color);
+        padding-top: 60px;
+        padding-bottom: 60px;
+        width: 100%;
+        box-sizing: border-box;
+
+        text-align: center;
+    }
+
+    #CGI, #CGI-front {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+    }
+
+    #CGI {
+        z-index: 0;
+    }
+
+    #CGI-front {
+        z-index: 2;
+    }
+
+    h1, h3 {
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    .divider {
+        width: 75%;
+        height: 1px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        background-color: var(--azure-text-color);
+    }
+
+    .divider-no-color {
+        width: 75%;
+        height: 3px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .divider-no-color-sm {
+        width: 75%;
+        height: 3px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .content {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        position: relative;
+        z-index: 1;
+        isolation: isolate;
+        width: 70%;
+        height: fit-content;
+        backdrop-filter: blur(var(--azure-section-background-blur));
+        -webkit-backdrop-filter: blur(var(--azure-section-background-blur));
+    }
+
+    .content::before {
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        background: var(--azure-section-background);
+        opacity: var(--azure-section-background-alpha, 100%);
+        content: "";
+        pointer-events: none;
+    }
+
+    .section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: fit-content;
+        box-sizing: border-box;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .text-section {
+        display: flex;
+        flex-direction: column;
+        width: min(100%, 42rem);
+        box-sizing: border-box;
+        line-height: 1.5;
+        overflow-wrap: anywhere;
+    }
+
+    .text-section a {
+        display: block;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    .sc-v {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .sc-h {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .img-pfp {
+        height: 100px;
+        aspect-ratio: 1 / 1;
+    }
+
+    @media (max-width: 600px) {
+        .background {
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
+
+        h1 {
+            font-size: clamp(1.5rem, 7vw, 2rem);
+        }
+
+        h3 {
+            font-size: clamp(1.1rem, 5vw, 1.4rem);
+        }
+    }
+</style>
+<div class="background">
+    <div id="CGI"></div>
+    <div class="content">
+        <div class="section">
+            <div class="sc-h">
+                <div class="sc-v">
+                    <img src="media/profile.png" class="img-pfp">
+                </div>
+                <div class="sc-v">
+                    <h1>Azure Azure</h1>
+                    <h3>Welcome to my Wall</h3>
+                </div>
+                <div class="sc-v">
+
+                </div>
+            </div>
+            <div class="divider"></div>
+        </div> 
+        <div class="section">
+            <div class="text-section">
+                <h2>About</h2>
+                
+                <a><b>Azure</b>has vibrant azure blue scales (I know, shocking), 
+                <a>with golden scales all over his chest and wing membrane.</a> 
+                <a>He has deep blue eyes.</a>
+            </div>
+            <div class="divider-no-color"></div>        
+        </div>
+        <div class="section">
+            <div class="text-section">
+                <h2>Friends and Relations</h2>
+                <b><i>I don't have VIP</i></b>
+                <div class="divider-no-color-sm"></div>
+                <a>- <b>Friends</b> - If I know you, <b>open</b></a>
+                <div class="divider-no-color-sm"></div>
+                <b>Relations</b>
+                <div class="divider-no-color-sm"></div>
+                <a>- Comrade in Chaos (CiC) - If I <b>know you, open</b></a>
+                <a>- Clawmate - If I <b>Know you, open</b></a>
+
+                <b>Nothing other than that</b>
+            </div>
+            <div class="divider-no-color"></div>
+        </div>
+        <div class="section">
+            <div class="text-section">
+                <h2>Wallpost Development</h2>
+                <a>Feel free to <b>letter</b> me about wallpost code</a>
+                <a>Some things to keep in mind:</a>
+                <div class="divider-no-color-sm"></div>
+                <a>I develop the wallpost code, *you* write what goes on it. 
+                <a>I can only write in what you give me.</a> 
+                <a>I will fix typos and grammer, but not the text itself.</a>
+                <a>I only work off of what you give me, so background, prefered 
+                <a>colors, fonts, etc.</a>
+                <div class="divider-no-color-sm"></div>
+                <a>Info I would need:</a>
+                <div class="divider-no-color-sm"></div>
+                <a>- <b>The <i>exact</i> text</b> to be displayed</a>
+                <a>- <b>Background</b> - If gradient or solid color: color.</a>
+                <a>If image: link</a>
+                <a>- <b>Text Color</b></a>
+                <div class="divider-no-color-sm"></div>
+                <i>Development may take me over a day to create.</i>
+                <i>Any wallposts without clear text of what to be displayed</i>
+                <i>will be denied</i>
+            </div>
+        </div>
+        <div class="section">
+            <div class="text-section">
+                <h2>Credit</h2>
+                <div class="divider-no-color-sm"></div>
+                <a>Profile Artwork by <b>Eria Fox</b></a>
+                <a>Artwork by <b>Azure Azure</b></a>
+                <a>Code written by <b>Azure Azure</b></a>
+            </div>
+        </div>
+    </div>
+    <div id="CGI-front"></div>
+</div>
