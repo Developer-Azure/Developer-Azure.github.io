@@ -1,3 +1,7 @@
+<!------------------------------------------------>
+<!-- Developed by Azure Azure (Developer-Azure) -->
+<!-- Version 2.1.0                              -->
+<!------------------------------------------------>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -7,9 +11,9 @@
         font-family: 'Inter', sans-serif;
         --azure-primary-color: #ff0000;
         --azure-secondary-color: #FFFF00;
-        --azure-text-color: #000000;
+        --azure-text-color: #FFF;
         --azure-secondary-text-color: #909090;
-        --azure-background: url("media/background.jpg");
+        --azure-background: linear-gradient(to bottom, #00BFFF, #0000FF);
         --azure-background-size: cover;
         --azure-section-background: #99755c;
         --azure-section-background-alpha: 50%;
@@ -194,6 +198,15 @@
                 <a>with golden scales all over his chest and wing membrane.</a> 
                 <a>He has deep blue eyes.</a>
             </div>
+            <div class="divider-no-color"></div>
+            <div class="text-section">
+                <h2>Nicknames</h2>
+                <div class="divider-no-color-sm"></div>
+                <a><b>Jewel Hive</b> - Azzy, Zure Zure, Blue</a>
+                <div class="divider-no-color-sm"></div>
+                <a><i>And that's all the nicknames I have</i></a>
+                <a><i>I'm open for more nicknames.</i></a>
+            </div>
             <div class="divider-no-color"></div>        
         </div>
         <div class="section">
@@ -205,9 +218,9 @@
                 <div class="divider-no-color-sm"></div>
                 <b>Relations</b>
                 <div class="divider-no-color-sm"></div>
-                <a>- Comrade in Chaos (CiC) - If I <b>know you, open</b></a>
-                <a>- Clawmate - If I <b>Know you, open</b></a>
-
+                <a>- Comrade in Chaos (CiC) - If <b>I know you, open</b></a>
+                <a>- Clawmate - If <b>I Know you, open</b></a>
+                <div class="divider-no-color-sm"></div>
                 <b>Nothing other than that</b>
             </div>
             <div class="divider-no-color"></div>
@@ -218,7 +231,7 @@
                 <a>Feel free to <b>letter</b> me about wallpost code</a>
                 <a>Some things to keep in mind:</a>
                 <div class="divider-no-color-sm"></div>
-                <a>I develop the wallpost code, *you* write what goes on it. 
+                <a>I develop the wallpost code, <i>you</i> write what goes on it. 
                 <a>I can only write in what you give me.</a> 
                 <a>I will fix typos and grammer, but not the text itself.</a>
                 <a>I only work off of what you give me, so background, prefered 
@@ -233,7 +246,7 @@
                 <div class="divider-no-color-sm"></div>
                 <i>Development may take me over a day to create.</i>
                 <i>Any wallposts without clear text of what to be displayed</i>
-                <i>will be denied</i>
+                <i>will be denied -- sorry, but I can't work with that.</i>
             </div>
         </div>
         <div class="section">
@@ -248,57 +261,3 @@
     </div>
     <div id="CGI-front"></div>
 </div>
-
-<script>
-(function() {
-
-    function sendHeight() {
-        const body = document.body;
-        const html = document.documentElement;
-
-        const height = Math.max(
-            body.scrollHeight,
-            body.offsetHeight,
-            html.scrollHeight,
-            html.offsetHeight,
-            html.clientHeight
-        );
-
-        window.parent.postMessage({
-            type: "AZURE_RESIZE",
-            height: height
-        }, "*");
-    }
-
-    // Observe layout changes
-    const observer = new ResizeObserver(sendHeight);
-
-    window.addEventListener("load", sendHeight);
-    window.addEventListener("resize", sendHeight);
-
-    observer.observe(document.documentElement);
-
-    // Observe images
-    document.querySelectorAll("img").forEach(img => {
-        img.addEventListener("load", sendHeight);
-    });
-
-    // Observe DOM changes
-    const mutationObserver = new MutationObserver(sendHeight);
-
-    mutationObserver.observe(document.documentElement, {
-        childList: true,
-        subtree: true,
-        attributes: true
-    });
-
-    // Wait for fonts
-    if (document.fonts) {
-        document.fonts.ready.then(sendHeight);
-    }
-
-    sendHeight();
-
-})();
-</script>
-
